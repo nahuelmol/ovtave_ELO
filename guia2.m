@@ -1,4 +1,4 @@
-[w1 j] = sort(w) 
+>>[w1 j] = sort(w) 
 //"sort" nombre de la funcion, 
 //"w1" "j"  parametros de salida
 //"w" valor de entrada
@@ -16,18 +16,16 @@ function y = exe_7(x)
   y = -x^2 + 2*x - 5;
 endfunction
 
-##cmd
-  x=3 //por ejemplo
-  y = exe_7(x)
+>>x=3 //por ejemplo
+>>y = exe_7(x)
   
 //si x es un vector, agrego el punto a x, asi la funcion se aplicara para cada valor del vector, x= -3:0.1:3
-  
-##cmd
-  x= -3:0.1:3
+
+>>x= -3:0.1:3
 //modifico el script
-  function y = exe_7(x)
-    y = -x.^2 + 2*x - 5;
-  endfunction
+function y = exe_7(x)
+  y = -x.^2 + 2*x - 5;
+endfunction
   
 ##cmd
   y = exe_7(x) //obtengo un nuevo valor
@@ -75,4 +73,32 @@ endfunction
 a=[3 1 2]
 b=[1 -4 9]
 c=[1 3 -5]
+
+//script
+
+function raices = cuadratica(a, b, c)  
+  raices(:,1) = (-b+sqrt(b.^2-4*a.*c))./(2*a);
+  raices(:,2) =(-b+sqrt(b.^2-4*a.*c))./(2*a);
+endfunction
+
+>>cuadratica(a b c)
+>>raices=cuadratica(3,1,1)
+
+########################################################################
+//punto 14
+function H=exe_14(n)
+  H=zeros(n);
+
+  for i=1:n
+    for j=1:n
+      H(i,j) = 1/(i+j-1);
+    endfor
+  endfor
+  
+endfunction
+
+>>H=exe_14(5)
+>>hilb(5)
+
+
 
