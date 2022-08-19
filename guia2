@@ -1,5 +1,0 @@
-[w1 j] = sort(w) 
-//"sort" nombre de la funcion, 
-//"w1" "j"  parametros de salida
-//"w" valor de entrada
-
