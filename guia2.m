@@ -31,3 +31,48 @@ endfunction
   
 ##cmd
   y = exe_7(x) //obtengo un nuevo valor
+  
+
+########################################################################
+
+//encontrar valores maximos y minimos
+    
+>>[valor j] = max(y)
+>>[val_min k]= min(y)
+   
+>>x(j) //para encontrar el maximo. aprovecho que tengo la posicion
+>>x(k) //para encontrar el minimo
+    
+    
+########################################################################
+    
+//para graficar la funcion
+>>plot(x,y)
+>>plot(1,1) //graficando un punto
+    
+>>hold on //debo usarlo para la grafica siga de fondo y no se sobrescriba
+
+>>plot([-3 3],[0 0],'k')
+>>plot([0 0],[val_min 0],'k')
+    
+########################################################################
+//funcion handle
+>>f=@(x) -x.^2 + 2*x - 5; 
+>>yl=f(x)
+  
+########################################################################
+//labels
+>>xlabel('Puntos de x')
+>>ylabel('Evaluacion de la funcion')
+>>title('Titulo del grafico')
+  
+########################################################################
+
+//punto 12
+//de una funcion cuadratica, las constantes pueden considerarse un vector
+//1) a=3;b=1; c=1
+  
+a=[3 1 2]
+b=[1 -4 9]
+c=[1 3 -5]
+
